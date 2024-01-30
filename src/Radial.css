@@ -1,0 +1,27 @@
+.radial-container {
+  height: 260px;
+  width: 260px;
+  position: relative;
+  background-color: #fbfbfb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radial {
+  background-color: #fbfbfb;
+}
+
+.radial-text {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+  text-align: center;
+}
+
+.percent {
+  font-weight: bold;
+}
