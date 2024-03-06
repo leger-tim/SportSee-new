@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import { RadialBarChart, RadialBar } from "recharts";
 import "./Radial.css";
 
-export default function RadialSport() {
+export default function RadialSport({ score }) {
   const [uvDynamic, setUvDynamic] = useState(0);
+  let score100 = score * 100;
 
   useEffect(() => {
-    // Simuler la récupération et la mise à jour de la valeur dynamique
-    setUvDynamic(12); // Exemple : uvDynamic est mis à jour à 75
-  }, []);
+    setUvDynamic(score100); // Utilisez la prop score ici
+  }, [score100]);
 
   // Calculer l'angle de remplissage basé sur uvDynamic
   const fillAngle = (uvDynamic / 100) * 360;

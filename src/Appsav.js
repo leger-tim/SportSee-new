@@ -18,12 +18,7 @@ import img3 from "./assets/Vector3.svg";
 import img4 from "./assets/Vector4.svg";
 import Bonjour from "./Bonjour";
 
-export default function App({
-  userData,
-  activityData,
-  performanceData,
-  averageSessionsData,
-}) {
+export default function App({ data }) {
   return (
     <>
       <Header />
@@ -38,47 +33,40 @@ export default function App({
           <p>Copyright SportSee 2024</p>
         </div>
         <div className="right-part">
-          {userData && userData.data && userData.data.userInfos && (
-            <Bonjour firstName={userData.data.userInfos.firstName} />
-          )}
-
+          <Bonjour />
           <div className="container-group">
             <div className="group">
-              <BarSport activityData={activityData} />
+              <BarSport />
               <div className="three">
-                <LineSport averageSessionsData={averageSessionsData} />
-                <HexaSport performanceData={performanceData} />
-                {userData && userData.data && (
-                  <RadialSport
-                    score={userData.data.todayScore || userData.data.score}
-                  />
-                )}
+                <LineSport />
+                <HexaSport />
+                <RadialSport />
               </div>
             </div>
-            {userData && userData.data && (
+            {data && data.data && (
               <div className="icon-group">
                 <IconBox
                   icon={icon1}
                   bgColor="rgba(255, 0, 0, 0.1)"
-                  text1={userData.data.keyData.calorieCount + "kCal"}
+                  text1={data.data.keyData.calorieCount + "kCal"}
                   text2={"Calories"}
                 />
                 <IconBox
                   icon={icon2}
                   bgColor="rgba(74, 184, 255, 0.1)"
-                  text1={userData.data.keyData.proteinCount + "g"}
+                  text1={data.data.keyData.proteinCount + "g"}
                   text2={"Proteines"}
                 />
                 <IconBox
                   icon={icon3}
                   bgColor="rgba(249, 206, 35, 0.1)"
-                  text1={userData.data.keyData.carbohydrateCount + "g"}
+                  text1={data.data.keyData.carbohydrateCount + "g"}
                   text2={"Glucides"}
                 />
                 <IconBox
                   icon={icon4}
                   bgColor="rgba(253, 81, 129, 0.1)"
-                  text1={userData.data.keyData.lipidCount + "g"}
+                  text1={data.data.keyData.lipidCount + "g"}
                   text2={"Lipides"}
                 />
               </div>

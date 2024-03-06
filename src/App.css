@@ -26,10 +26,6 @@
   margin: 3%;
 }
 
-.group {
-  background-color: aqua;
-}
-
 .three {
   display: flex;
   flex-direction: row;
