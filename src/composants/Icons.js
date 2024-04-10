@@ -1,5 +1,5 @@
 import React from "react";
-import "./Icons.css";
+import "../style/Icons.css";
 
 function IconBox({ icon, text1, text2, bgColor }) {
   return (

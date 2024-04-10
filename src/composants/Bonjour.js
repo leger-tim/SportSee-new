@@ -1,5 +1,5 @@
 import React from "react";
-import "./Bonjour.css";
+import "../style/Bonjour.css";
 
 function Bonjour({ firstName }) {
   return (

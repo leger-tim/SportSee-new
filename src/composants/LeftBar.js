@@ -1,5 +1,5 @@
 import React from "react";
-import "./LeftBar.css";
+import "../style/LeftBar.css";
 
 function LeftBar({ icon, alt }) {
   return (

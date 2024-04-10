@@ -6,7 +6,7 @@ const ParentComponent = () => {
   const [activityData, setActivityData] = useState(null);
   const [averageSessionsData, setAverageSessionsData] = useState(null);
   const [performanceData, setPerformanceData] = useState(null);
-  const userId = 12; // or 18
+  const userId = 18;
 
   useEffect(() => {
     async function loadData() {

@@ -7,7 +7,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import "./Bar.css";
+import "../style/Bar.css";
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
@@ -36,7 +36,7 @@ export default function BarSport({ activityData }) {
         <BarChart
           className="bar"
           width={500}
-          height={300}
+          height={100}
           data={activityData}
           margin={{
             top: 5,

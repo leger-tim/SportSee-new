@@ -1,22 +1,21 @@
-import "./styles.css";
 import "./App.css";
 import React from "react";
-import LineSport from "./Line";
-import BarSport from "./Bar";
-import HexaSport from "./Hexa";
-import RadialSport from "./Radial";
-import IconBox from "./Icons";
+import LineSport from "./composants/Line";
+import BarSport from "./composants/Bar";
+import HexaSport from "./composants/Hexa";
+import RadialSport from "./composants/Radial";
+import IconBox from "./composants/Icons";
 import icon1 from "./assets/Pathcalories.svg";
 import icon2 from "./assets/Pathproteines.svg";
 import icon3 from "./assets/appleglucides.svg";
 import icon4 from "./assets/cheeseburgerLipides (2).svg";
-import Header from "./Nav";
-import LeftBar from "./LeftBar";
+import Header from "./composants/Nav";
+import LeftBar from "./composants/LeftBar";
 import img1 from "./assets/Group1.svg";
 import img2 from "./assets/Group 32.svg";
 import img3 from "./assets/Vector3.svg";
 import img4 from "./assets/Vector4.svg";
-import Bonjour from "./Bonjour";
+import Bonjour from "./composants/Bonjour";
 
 export default function App({
   userData,

@@ -1,11 +1,11 @@
-import "./Line.css";
+import "../style/Line.css";
 import React from "react";
 import {
   LineChart,
   Line,
   CartesianGrid,
   Tooltip,
-  // ResponsiveContainer,
+  ResponsiveContainer,
 } from "recharts";
 
 // Fonction de rendu personnalisée pour le Tooltip
@@ -33,14 +33,13 @@ const CustomTooltip = ({ active, payload }) => {
 
 export default function LineSport({ averageSessionsData }) {
   return (
-    <>
-      <div className="line-box">
-        {/* <ResponsiveContainer width="100%" height="100%"> */}
+    <div className="line-box">
+      <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={averageSessionsData}
           background={{ fill: "#ff0000" }}
-          width={260}
-          height={260}
+          // width={260}
+          // height={260}
           margin={{
             top: 0,
             right: 0,
@@ -60,8 +59,7 @@ export default function LineSport({ averageSessionsData }) {
             // strokeWidth={3}
           />
         </LineChart>
-        {/* </ResponsiveContainer> */}
-      </div>
-    </>
+      </ResponsiveContainer>
+    </div>
   );
 }

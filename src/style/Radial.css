@@ -1,6 +1,6 @@
 .radial-container {
-  height: 260px;
-  width: 260px;
+  height: 200px;
+  width: 200px;
   position: relative;
   background-color: #fbfbfb;
   display: flex;
@@ -24,4 +24,10 @@
 
 .percent {
   font-weight: bold;
+}
+@media screen and (min-width: 1024px) and (min-height: 768px) and (max-width: 1320px) and (max-height: 1080px) {
+  .radial-container {
+    width: 160px;
+    height: 160px;
+  }
 }
