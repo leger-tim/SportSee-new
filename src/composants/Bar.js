@@ -6,6 +6,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 import "../style/Bar.css";
 
@@ -33,63 +34,64 @@ export default function BarSport({ activityData }) {
   return (
     <>
       {activityData && (
-        <BarChart
-          className="bar"
-          width={500}
-          height={100}
-          data={activityData}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid
-            strokeDasharray="3 3"
-            horizontal={true}
-            vertical={false}
-          />
-          <XAxis tickLine={false} tickFormatter={(value) => value + 1} />
-          <YAxis
-            tickLine={false}
-            orientation="left"
-            axisLine={false}
-            yAxisId="left"
-            hide={true}
-          />
-          <YAxis
-            tickLine={false}
-            orientation="right"
-            axisLine={false}
-            yAxisId="right"
-          />
-          <Tooltip content={<CustomTooltip />} />
-          <Legend
-            align="right"
-            verticalAlign="top"
-            wrapperStyle={{
-              paddingBottom: "20px",
-            }}
-            iconType="circle"
-          />
-          <Bar
-            yAxisId="right"
-            dataKey="pv"
-            fill="#282d30"
-            radius={[3.5, 3.5, 0, 0]}
-            barSize={7}
-            name="Poids (kg)"
-          />
-          <Bar
-            yAxisId="left"
-            dataKey="uv"
-            fill="#e60000"
-            radius={[3.5, 3.5, 0, 0]}
-            barSize={7}
-            name="Calories brûlées (kCal)"
-          />
-        </BarChart>
+        <div className="bar-style">
+          <ResponsiveContainer width="100%" height={320}>
+            <BarChart
+              data={activityData}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid
+                strokeDasharray="3 3"
+                horizontal={true}
+                vertical={false}
+              />
+              <XAxis tickLine={false} tickFormatter={(value) => value + 1} />
+              <YAxis
+                tickLine={false}
+                orientation="left"
+                axisLine={false}
+                yAxisId="left"
+                hide={true}
+              />
+              <YAxis
+                tickLine={false}
+                orientation="right"
+                axisLine={false}
+                yAxisId="right"
+              />
+              <Tooltip content={<CustomTooltip />} />
+              <Legend
+                align="right"
+                verticalAlign="top"
+                wrapperStyle={{
+                  paddingBottom: "20px",
+                }}
+                iconType="circle"
+              />
+              <Bar
+                yAxisId="right"
+                dataKey="pv"
+                fill="#282d30"
+                radius={[3.5, 3.5, 0, 0]}
+                barSize={7}
+                name="Poids (kg)"
+              />
+              <Bar
+                yAxisId="left"
+                dataKey="uv"
+                fill="#e60000"
+                radius={[3.5, 3.5, 0, 0]}
+                barSize={7}
+                name="Calories brûlées (kCal)"
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       )}
       <div className="hello">Activité Quotidienne</div>
     </>

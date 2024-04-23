@@ -1,6 +1,25 @@
+@media (min-width: 1024px) and (max-width: 1331px) and (min-height: 780px) and (max-height: 1014px) {
+  /* Styles pour les écrans dans cette plage de dimensions */
+  .icon-box {
+    width: 140px;
+    height: 85px;
+  }
+  .img-container {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1332px), (min-height: 1015px) {
+  .icon-box {
+    width: 260px;
+    height: 125px;
+  }
+  .img-container {
+    margin-left: 35px;
+  }
+}
+
 .icon-box {
-  width: 260px;
-  height: 55px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -11,7 +30,6 @@
 .img-container {
   width: 60px;
   height: 60px;
-  margin-left: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;

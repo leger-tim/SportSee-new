@@ -34,12 +34,10 @@ const CustomTooltip = ({ active, payload }) => {
 export default function LineSport({ averageSessionsData }) {
   return (
     <div className="line-box">
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="90%" height="90%">
         <LineChart
           data={averageSessionsData}
           background={{ fill: "#ff0000" }}
-          // width={260}
-          // height={260}
           margin={{
             top: 0,
             right: 0,
@@ -56,10 +54,11 @@ export default function LineSport({ averageSessionsData }) {
             stroke="#f9c3c3"
             activeDot={{ r: 3, fill: "white" }}
             dot={false}
-            // strokeWidth={3}
+            strokeWidth={3}
           />
         </LineChart>
       </ResponsiveContainer>
+      <div className="duree">Durée moyenne des sessions</div>
     </div>
   );
 }

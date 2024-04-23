@@ -9,57 +9,16 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-// const data = [
-//   {
-//     subject: "Intensité",
-//     A: 120,
-//     B: 110,
-//     fullMark: 150,
-//   },
-//   {
-//     subject: "Vitesse",
-//     A: 98,
-//     B: 130,
-//     fullMark: 150,
-//   },
-//   {
-//     subject: "Force",
-//     A: 86,
-//     B: 130,
-//     fullMark: 150,
-//   },
-//   {
-//     subject: "Endurance",
-//     A: 99,
-//     B: 100,
-//     fullMark: 150,
-//   },
-//   {
-//     subject: "Energie",
-//     A: 85,
-//     B: 90,
-//     fullMark: 150,
-//   },
-//   {
-//     subject: "Cardio",
-//     A: 65,
-//     B: 85,
-//     fullMark: 150,
-//   },
-// ];
-
 export default function HexaSport({ performanceData }) {
   return (
     <div className="radar">
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart
           outerRadius={80}
-          width={260}
-          height={260}
+          background={{ fill: "black" }}
           data={performanceData}
           fill="black"
           stroke="white"
-          margin={0}
         >
           <PolarGrid
             gridType="polygon"
@@ -69,7 +28,7 @@ export default function HexaSport({ performanceData }) {
           />
           <PolarAngleAxis
             dataKey="subject"
-            tick={{ fill: "white", fontSize: 11 }}
+            tick={{ fill: "white", fontSize: 10 }}
             tickLine={false}
           />
           <PolarRadiusAxis tick={false} axisLine={false} />
