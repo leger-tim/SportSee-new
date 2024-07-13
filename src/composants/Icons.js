@@ -8,8 +8,8 @@ function IconBox({ icon, text1, text2, bgColor }) {
         <img src={icon} alt="Icon" />
       </div>
       <div className="text-content">
-        <p>{text1}</p>
-        <p>{text2}</p>
+        <p className="kcal">{text1}</p>
+        <p className="macro">{text2}</p>
       </div>
     </div>
   );

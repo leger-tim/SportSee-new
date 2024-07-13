@@ -22,9 +22,18 @@
 }
 
 .duree {
-  color: white;
+  color: #ff8080;
   width: 140px;
   position: absolute;
-  top: 10px;
-  left: 20px;
+  top: 20px;
+  left: 30px;
+}
+
+.semaine {
+  display: flex;
+  position: absolute;
+  top: 200px;
+  justify-content: space-between;
+  width: 96%;
+  color: #ff8080;
 }

@@ -4,14 +4,14 @@ import "../style/Radial.css";
 
 export default function RadialSport({ score }) {
   const [uvDynamic, setUvDynamic] = useState(0);
-  let score100 = score * 100;
 
   useEffect(() => {
+    let score100 = score * 100;
     setUvDynamic(score100); // Utilisez la prop score ici
-  }, [score100]);
+  }, [score]);
 
   // Calculer l'angle de remplissage basé sur uvDynamic
-  const fillAngle = (100 / 100) * 360;
+  const fillAngle = (uvDynamic / 100) * 360;
 
   const data = [
     {
@@ -45,7 +45,9 @@ export default function RadialSport({ score }) {
         </ResponsiveContainer>
         <div className="radial-text">
           <p className="percent">{uvDynamic}%</p>
-          <p>de votre objectif</p>
+          <p className="objectif">
+            de votre <br></br>objectif
+          </p>
         </div>
         <div className="score">Score</div>
       </div>
