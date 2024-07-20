@@ -8,10 +8,6 @@
   .left-part {
     width: 7%;
   }
-
-  .right-part {
-    margin: 1%;
-  }
 }
 @media (min-width: 1332px), (min-height: 1015px) {
   .icon-group {
@@ -22,12 +18,13 @@
   .left-part {
     width: 10%;
   }
-
-  .right-part {
-    margin: 3%;
-  }
 }
 
+.right-part {
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-right: 50px;
+}
 /* Pos relative pour titre hello */
 .group {
   position: relative;
@@ -80,4 +77,16 @@
 .recharts-wrapper {
   width: 160px;
   height: 160px;
+}
+@media screen and (max-width: 1200px) {
+  .right-part {
+    margin: 1.5%;
+  }
+}
+
+.error-message {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

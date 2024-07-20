@@ -31,6 +31,8 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 export default function BarSport({ activityData }) {
+  console.log("BarSport activityData:", activityData); // Vérification des données
+
   return (
     <>
       {activityData && (

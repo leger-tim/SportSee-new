@@ -48,3 +48,8 @@
   font-size: small;
   color: #74798c;
 }
+@media screen and (max-width: 1200px) {
+  .kcal {
+    font-size: small;
+  }
+}
